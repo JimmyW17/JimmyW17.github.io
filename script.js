@@ -27,8 +27,7 @@ Jukebox.prototype.play = function(){
     jukebox.src = this.songs[this.songNum];
   }
   console.log(this.songs[this.songNum]);
-  // jukebox.play();
-  playSC(jukebox);
+  jukebox.play();
 }
 
 Jukebox.prototype.pause = function() {
@@ -63,17 +62,17 @@ Jukebox.prototype.shuffle = function() {
   jukebox.currentTime = 0;
 }
 
-// var song1 = new Song('audio/BeethovenMoonlight1.mp3', 'Beethoven Moonlight 1');
-// var song2 = new Song('audio/Bagatelle1.mp3', 'Bagatelle No1');
-// var song3 = new Song('audio/Emperor.mp3', 'Emperor');
-// var song4 = new Song('audio/BeethovenRondo51_1.mp3', 'Beethoven Rondo OP51:1');
-// var song5 = new Song('http://www.download2mp3.com/beethoven_htm_files/BeethovenPeasantDance.mp3', 'Beethoven Peasant Dance');
+var song1 = new Song('audio/BeethovenMoonlight1.mp3', 'Beethoven Moonlight 1');
+var song2 = new Song('audio/Bagatelle1.mp3', 'Bagatelle No1');
+var song3 = new Song('audio/Emperor.mp3', 'Emperor');
+var song4 = new Song('audio/BeethovenRondo51_1.mp3', 'Beethoven Rondo OP51:1');
+var song5 = new Song('http://www.download2mp3.com/beethoven_htm_files/BeethovenPeasantDance.mp3', 'Beethoven Peasant Dance');
 var theJukebox = new Jukebox();
-// theJukebox.addSong(song1);
-// theJukebox.addSong(song2);
-// theJukebox.addSong(song3);
-// theJukebox.addSong(song4);
-// theJukebox.addSong(song5);
+theJukebox.addSong(song1);
+theJukebox.addSong(song2);
+theJukebox.addSong(song3);
+theJukebox.addSong(song4);
+theJukebox.addSong(song5);
 
 var jukebox = document.getElementById('jukebox');
 var play = document.getElementById('play');
@@ -255,19 +254,3 @@ addButton.addEventListener('click', function(event) {
 })
 
 // VISUALIZER JS
-
-
-
-// SoundCloud API
-SC.initialize({client_id: 'fd4e76fc67798bfa742089ed619084a6'});
-
-var scSong1 = new Song('/tracks/269161148', 'SoundCloud example');
-theJukebox.addSong(scSong1);
-
-function playSC(track) {
-  SC.stream(track).then(function(player){
-    player.play();
-    console.log(player);
-    console.log(SC);
-  })
-}
