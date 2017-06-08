@@ -2,50 +2,144 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Jukebox</title>
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
-  <!-- Visualizer style -->
+  <title>Jimmy Wu's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link rel="stylesheet" href="flexslider/flexslider.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="main.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="flexslider/jquery.flexslider.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+  <base target="_blank">
 </head>
 <body>
-  <audio id="jukebox">
-    <source src="" type="audio/mpeg">
-    </audio>
-    <div id="controls">
-      <h2> <span id="mp3src">. . .</span></h2>
-      <i class="fa fa-step-backward" aria-hidden="true" id="previous"></i>
-      <i class="fa fa-random" aria-hidden="true" id="shuffle"></i>
-      <i class="fa fa-play-circle" aria-hidden="true" id="play"></i>
-      <i class="fa fa-pause-circle-o" aria-hidden="true" id="pause"></i>
-      <i class="fa fa-step-forward" aria-hidden="true" id="next"></i>
-      <input type="range" onchange="setVolume();" id='volume1' min=0 max=1 step=0.01 value="1l">
-      <h3><span id="audioCurrent">00:00</span> - <span id="audioLength">00:00</span></h3>
-    </div>
-    <div id="playlist-container">
-      <div id="addAudio">
-        <h2>Add to Playlist:</h2>
-        <p>Example mp3 links for testing: <a href="http://www.download2mp3.com/beethoven.htm">Beethoven</a></p>
-        <form onsubmit="formReset(); event.preventDefault();" action='index.html' method="post" id="audioForm">
-          <!-- line above, action='javascript:void(0);' makes it so that page doesn't reload on submit -->
-          <input type="text" name="Audio Source" placeholder="Source" id="audioInput" ><br>
-          <input type="text" name="Audio Name" placeholder="Title" id="audioName"><br>
-          <input type="submit" name="" value="Add" id="addButton"><br>
-          <!-- <input type="file" name="Upload" value="" id="upload"> -->
-        </form>
-      </div>
-      <h2>Playlist:</h2>
-      <ol id="playlist">
-      </ol>
-    </div>
-
-    <a href="#" id="iconLeft"><i class="fa fa-chevron-left" aria-hidden="true" ></i></a>
-    <a href="#" id="iconRight"><i class="fa fa-chevron-right" aria-hidden="true" ></i></a>
-
-
-    <!-- Visualizer -->
-
-    <script src="script.js" charset="utf-8"></script>
-    <script src="https://use.fontawesome.com/61ae56f9bc.js"></script>
-  </body>
-  </html>
+  <nav id="navbar">
+    <ul class="nav_ul">
+      <li><a href="#" class="nav_link">Me</a></li>
+      <li><a href="#" class="nav_link">Projects</a></li>
+      <li><a href="#" class="nav_link">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="flexslider">
+    <ul class="slides">
+      <li class="content">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <h1 id="name">JIMMY<br>WU</h1>
+            </div>
+            <div class="col-md-7">
+              <br><br><br>
+              <h1 class="align-left">Hi, I'm a Web Developer</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 header">
+              <h3>Technical Background</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Although I consider myself more comfortable with the Back-end aspects of programming, I design and develop my applications from the beginning to the end.</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4>My Front-end development skills includes <strong>HTML/CSS</strong>, <strong>JavaScript</strong>, <strong>SASS</strong>, <strong>JQuery</strong>, and <strong>Bootstrap</strong>.</h4>
+            </div>
+            <div class="col-md-6">
+              <h4>My Back-end development skills includes <strong>Ruby on Rails</strong>, <strong>Sinatra</strong>, <strong>Java</strong>, and <strong>Python</strong>. I love utilizing <strong>APIs</strong> on my projects.</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 header">
+              <h3>Personal Front</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h4>I am a gamer. I would highly recommend <a href="http://store.steampowered.com/app/252950/Rocket_League/" class="link">Rocket League</a> because it will entertain you without fail and has near-infinite replayability. I am also a big fan of MMA, currently following the UFC and Rizin.</h4>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="content">
+        <h1>Projects</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 header">
+              <h3>With An Image</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 project_title">
+              <p>Have an image, but it's static and boring? Upload that image and watch as content is dynamically generated!</p>
+              <h3><a href="http://withanimage.herokuapp.com/">Heroku</a></h3>
+              <h3><a href="https://github.com/JimmyW17/With-An-Image">Github</a></h3>
+            </div>
+            <div class="col-md-6 project_description">
+              <a href="http://i.imgur.com/rTat7GJ.gif"><img src="http://i.imgur.com/rTat7GJ.gif" alt=""></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 header">
+              <h3>Notehub</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 project_title">
+              <p>Create documents while utilizing a to-do list to outline notes.</p>
+              <h3><a href="http://notestaker.herokuapp.com/">Heroku</a></h3>
+              <h3><a href="https://github.com/JimmyW17/Note_Taker">Github</a></h3>
+            </div>
+            <div class="col-md-6 project_description">
+              <a href="http://noteshub.herokuapp.com/"><img src="images/NoteHub.PNG" alt=""></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 header">
+              <h3>Jukebox</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 project_title">
+              <p>Audio player with custom controls, album playlist, and music file linking.</p>
+              <h3><a href="https://jimmyw17.github.io/Jukebox/">Github.io</a></h3>
+              <h3><a href="https://github.com/JimmyW17/Jukebox">Github</a></h3>
+            </div>
+            <div class="col-md-6 project_description">
+              <a href="https://i.imgur.com/zaVVjZP.gif"><img src="images/jukebox.gif" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="content">
+        <h1>Contact</h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <a href="https://www.linkedin.com/in/jimmywu94/">
+                <img src="images/linkedin.png" alt="" class="icon">
+              </a>
+              <a href="https://github.com/JimmyW17">
+                <img src="images/github.png" alt="" class="icon">
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <a target="_blank" href="https://drive.google.com/file/d/0B8mU04iEpj2YekxadllaQWF6X2M/view?usp=sharing">Resume</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
