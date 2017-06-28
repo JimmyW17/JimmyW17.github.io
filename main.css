@@ -1,9 +1,11 @@
 body {
   font-family: 'Roboto Mono', monospace !important;
+  margin: 0;
+  background-color: black;
 }
 
-body {
-  margin: 0;
+.row {
+  background: white;
 }
 
 a {
@@ -15,6 +17,10 @@ h1 {
   margin-bottom: 30px;
 }
 
+.black_background {
+  background-color: black;
+  color: white;
+}
 .nav_ul {
   list-style-type: none;
   /*width: fit-content;*/
@@ -88,7 +94,11 @@ h1 {
 
 .header h3 {
   color: white;
-  text-align: left;
+  /*text-align: left;*/
+}
+
+.top_margin {
+  margin-top: 100px;
 }
 
 .link {
