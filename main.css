@@ -37,7 +37,8 @@ h1 {
 #navbar {
   position: fixed;
   width: 100%;
-  background-color: black;
+  background: black;
+  font-size: 25px;
   color: white;
   padding-top: 10px;
   padding-bottom: 10px;
