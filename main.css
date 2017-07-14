@@ -47,12 +47,35 @@ h1 {
   z-index: 100;
 }
 
-.flexslider {
-  margin-top: 120px !important;
+nav.shrink {
+  max-height: 35px;
+}
+
+nav.shrink ul {
+  position: fixed;
+  top: -27px;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+nav{
+  background-color:#ccc;
+  /*Animation*/
+   -webkit-transition: all 0.4s ease;
+   transition: all 0.4s ease;
+}
+
+#me {
+  padding-top: 100px;
 }
 
 .content {
   text-align: center;
+}
+
+.margin-top {
+  margin-top: 50px;
 }
 
 .project_title {
@@ -63,6 +86,10 @@ h1 {
 
 .project_description {
   border: 1px solid black;
+}
+
+.project_description img {
+  width: 100%;
 }
 
 .underline {
